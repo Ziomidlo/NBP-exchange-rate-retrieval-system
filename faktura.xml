@@ -1,0 +1,20 @@
+<faktura>
+  <komputer>
+    <nazwa>ACER Aspire</nazwa>
+    <data_ksiegowania>2026-01-05</data_ksiegowania>
+    <koszt_USD>345.00</koszt_USD>
+    <koszt_PLN>1243.55</koszt_PLN>
+  </komputer>
+  <komputer>
+    <nazwa>HP Victus</nazwa>
+    <data_ksiegowania>2026-01-19</data_ksiegowania>
+    <koszt_USD>346.00</koszt_USD>
+    <koszt_PLN>1257.05</koszt_PLN>
+  </komputer>
+  <komputer>
+    <nazwa>DELL Latitude</nazwa>
+    <data_ksiegowania>2026-01-15</data_ksiegowania>
+    <koszt_USD>553.20</koszt_USD>
+    <koszt_PLN>2000.00</koszt_PLN>
+  </komputer>
+</faktura>

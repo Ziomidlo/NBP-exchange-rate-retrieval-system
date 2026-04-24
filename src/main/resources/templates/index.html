@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>System kursu walut NBP - Faktury</title>
+    <style>
+        body{ font-family: Arial, sans-serif; margin: 40px; }
+        table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+        th, td { border: 1px solid #dddddd; text-align: left; padding: 12px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h2>Zestawienie Komputerów po kursie NBP</h2>
+
+    <div class="search-box">
+        <form action="/" method="GET">
+            <label for="search">Wyszukaj po nazwie:</label>
+            <input type="text" id="search" name="search" placeholder="np. ACER">
+            <button type="submit">Szukaj</button>
+            <a href="/"><button type="button">Wyczyść</button> </a>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nazwa</th>
+                <th>Data Księgowania</th>
+                <th>Koszt USD</th>
+                <th>Koszt PLN</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="computer : ${computers}">
+                <td th:text="${computer.id}">1</td>
+                <td th:text="${computer.name}">Przykładowa nazwa</td>
+                <td th:text="${computer.date}">2026-01-01</td>
+                <td th:text="${computer.costUsd} + ' USD'">100 USD</td>
+                <td th:text="${#numbers.formatDecimal(computer.costPln, 1, 2)} + ' PLN'">400 PLN</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
